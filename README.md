@@ -24,6 +24,7 @@ A command-line tool to **detect**, **block**, **unblock**, and **audit** Android
 - **Hardens** your profile by disabling logs and enabling privacy features. **(NOT RECCOMENEDED IF PURSUEING LEGAL ACCOUNTABILITY)**
 
 ## Why it exists
+
 this exists due to to zero other solutions  online, me wanting to develop software with out risk of intellectual property right theft and finding buku evidence of device management everywhere else EXCEPT IN THE SETTINGS where it should appear, reciveing unhelpful support from support agents turns out my agent messages were rerouted to the organization ADMIN, and because i live in the streets and everyone around me is dying from the fety epidemic indont smoke whikenthey nodded off i built software to escape then street realized my phone was being managed then built this.   HA! you fucker spy on me while you steal this.
 ---
 
