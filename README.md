@@ -18,10 +18,10 @@ A command-line tool to **detect**, **block**, **unblock**, and **audit** Android
 - **Detects** active or hidden management agents, device owner info, stealthy packages, URLs, and configurations.
 - **Blocks** communication to known management servers/domains via NextDNS denylist.
 - **Removes** domains from denylist.
-- **Sends** formal legal notices directly into management consoles via protocols like OMA-DM, Apple MDM, Knox, or generic HTTP.
+- **Sends** formal legal notices directly into management consoles via protocols like OMA-DM, Apple MDM, Knox, or generic HTTP. 
 - **Provides** setup instructions for configuring NextDNS on your device.
 - **Performs** deep detection using privileged commands (`rish`) via Shizuku for full device info.
-- **Hardens** your profile by disabling logs and enabling privacy features.
+- **Hardens** your profile by disabling logs and enabling privacy features. **(NOT RECCOMENEDED IF PURSUEING LEGAL ACCOUNTABILITY)**
 
 ---
 
@@ -52,7 +52,6 @@ pkg install python
 ### 3. Install dependencies
 
 ```bash
-pip install --upgrade pip
 pip install requests
 ```
 
@@ -64,11 +63,18 @@ pip install requests
 ```bash
 cp /sdcard/Download/evanrocks.py ~/evanrocks.py
 ```
+or
+
+```bash
+git clone https://github.com/SecTrollz/MDMWreck.git
+cd MDMWreck
+```
+
 
 ### 5. Run the tool
 
 ```bash
-python3 ~/evanrocks.py
+python3 evanrocks.py
 ```
 
 Follow the on-screen prompts to:
@@ -89,7 +95,8 @@ To perform deep detection of hidden or stealth admins:
 
 ```bash
 # In Termux
-mkdir -p ~/shizuku && cd ~/shizuku
+mkdir -p ~/shizuku
+cd ~/shizuku
 SHIZUKU_VER=$(curl -s https://api.github.com/repos/RikkaApps/Shizuku/releases/latest | grep '"tag_name"' | head -1 | cut -d'"' -f4)
 wget -q "https://github.com/RikkaApps/Shizuku/releases/download/${SHIZUKU_VER}/rish_shizuku.dex" -O rish.dex
 wget -q "https://github.com/RikkaApps/Shizuku/releases/download/${SHIZUKU_VER}/rish" -O rish
@@ -102,10 +109,13 @@ chmod +x rish
 sh rish -c "id"
 ```
 
+
 6. Run the script with deep detection:
 
 ```bash
-python ~/evanrocks.py --deep
+cd ..
+cd MDMWreck
+python evanrocks.py --deep
 ```
 
 This executes `dumpsys device_policy` with full privileges, increasing detection reliability.
@@ -117,7 +127,7 @@ This executes `dumpsys device_policy` with full privileges, increasing detection
 Run in Termux:
 
 ```bash
-python ~/evanrocks.py
+python3 evanrocks.py
 ```
 
 Follow menu options:
@@ -156,7 +166,18 @@ Follow menu options:
 
 ## Final Notes
 
-This is a **raw, power-user tool** for detection, blocking, and notification of device management agents. Use responsibly, follow instructions carefully, and review all outputs before acting.
+This is a **power-user tool** for detection, blocking, and notification of device management agents. Use responsibly, follow instructions carefully, and review all outputs before acting.
+
+
+NOTICE: SHIZUKU CAN BE DANGEROUS IF YOU DONT KNOW WHAT YOUR DOING. 
+
+FOLLOW ALL LAWS
+DO NOT MISUSE THIS TOOL.
+THIS TOOL IS FOR DEFENSE EDUCATION AND RESEARCH
+USE AT YOUR OWN RISK
+BY USING THIS TOOL YOU AGREE THAT THE CREATOR, EVAN SAURAGE, IS NOT HELD RESPONSIBLE OR LIABLE  FOR ANY OF THE OUTCOMES WHICH MAY UNFOLDNDUE TO THE USE OF THIS TOOL.
+
+DO NOT FORK OR MODIFY THIS CODE IN ANY WAY YOU DO NOT HAVE THE RIGHT TO.
 
 ---
 
