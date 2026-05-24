@@ -18,7 +18,7 @@ USE THIS TOOL AT YOUR OWN RISK.
 IF MISUSE OCCURS AND I FIND OUT IMMA TELL SANTA.
 
 QUICK START (run this first):
-    python3 nextdns_mdm_block.py
+    python3 evanrocks.py
 
 REQUIREMENTS:
     • Python 3.8+  (check: python3 --version)
