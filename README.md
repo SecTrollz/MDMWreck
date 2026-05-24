@@ -1,4 +1,4 @@
-This one's for you, Aaron Miller of the Colorado Department Of Early Childhood Development. (;
+This one's for you, **Aaron Miller** of the Colorado Department Of Early Childhood Development. (;
 
 # Evan's MDM Toolkit 
 
@@ -23,6 +23,8 @@ A command-line tool to **detect**, **block**, **unblock**, and **audit** Android
 - **Performs** deep detection using privileged commands (`rish`) via Shizuku for full device info.
 - **Hardens** your profile by disabling logs and enabling privacy features. **(NOT RECCOMENEDED IF PURSUEING LEGAL ACCOUNTABILITY)**
 
+## Why it exists
+this exists due to to zero other solutions  online, me wanting to develop software with out risk of intellectual property right theft and finding buku evidence of device management everywhere else EXCEPT IN THE SETTINGS where it should appear, reciveing unhelpful support from support agents turns out my agent messages were rerouted to the organization ADMIN, and because i live in the streets and everyone around me is dying from the fety epidemic indont smoke whikenthey nodded off i built software to escape then street realized my phone was being managed then built this.   HA! you fucker spy on me while you steal this.
 ---
 
 ## Requirements
@@ -39,14 +41,15 @@ A command-line tool to **detect**, **block**, **unblock**, and **audit** Android
 
 ### 1. Install Termux
 
-- Download from F-Droid: [https://f-droid.org/F-Droid.apk](https://f-droid.org/F-Droid.apk)
+- Download from GitHub or F-Droid: [https://f-droid.org/F-Droid.apk](https://f-droid.org/F-Droid.apk)
 - Open Termux.
 
 ### 2. Install Python
 
 ```bash
 pkg update && pkg upgrade
-pkg install python
+pkg install python3
+pkg install python3-pip
 ```
 
 ### 3. Install dependencies
@@ -61,7 +64,8 @@ pip install requests
 - Copy it into Termux:
 
 ```bash
-cp /sdcard/Download/evanrocks.py ~/evanrocks.py
+termux-setup-storage
+
 ```
 or
 
@@ -88,9 +92,9 @@ Follow the on-screen prompts to:
 
 To perform deep detection of hidden or stealth admins:
 
-1. Install **Shizuku** from Play Store.
+1. Install **Shizuku** from Play Store, Fdroid, or Github.
 2. Start Shizuku with Wireless Debugging enabled.
-3. Install **Termux** (via F-Droid).
+3. Install **Termux** (via F-Droid or GitHub NOT PLAY STORE).
 4. Download and set up `rish` shell:
 
 ```bash
@@ -106,16 +110,16 @@ chmod +x rish
 5. Verify:
 
 ```bash
-sh rish -c "id"
+./rish -c "id"
 ```
 
 
 6. Run the script with deep detection:
 
 ```bash
-cd ..
+cd 
 cd MDMWreck
-python evanrocks.py --deep
+python3 evanrocks.py --deep
 ```
 
 This executes `dumpsys device_policy` with full privileges, increasing detection reliability.
